@@ -1,8 +1,37 @@
 .main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.overlay,
+.video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.video {
+  z-index: -100;
+}
+
+.overlay {
+  background-color: #00000066;
+  z-index: -10;
+}
+
+.businessCard {
+  max-width: 300px;
+  width: 100%;
 }
