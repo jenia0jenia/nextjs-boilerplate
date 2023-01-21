@@ -1,0 +1,24 @@
+.local {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+
+  @media screen and (min-width: 1200px) {
+  }
+
+  &List {
+    list-style: none;
+  }
+
+  &Item {
+    line-height: 2;
+
+    @media screen and (min-width: 1200px) {
+    }
+  }
+
+  & a,
+  &Link {
+    color: white;
+  }
+}
