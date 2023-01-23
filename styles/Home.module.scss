@@ -37,9 +37,64 @@
   color: white;
   max-width: 300px;
   width: 100%;
-  word-spacing: 10px;
-  letter-spacing: 11px;
-  line-height: 42px;
-  font-size: 22px;
-  font-weight: 100;
+  
+  &Title {
+    word-spacing: 10px;
+    letter-spacing: 11px;
+    line-height: 42px;
+    font-size: 22px;
+    font-weight: 100;
+    margin-bottom: 24px;
+  }
+  &Phone {
+    a {
+      color: white;
+    }
+  }
 }
+
+.contacts {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  line-height: 2;
+  color: white;
+  font-family: Arial;
+
+  &Phone {
+    a {
+      color: white;
+    }
+  }
+  &Email {
+    a {
+      color: white;
+    }
+  }
+}
+
+.local {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+
+  @media screen and (min-width: 1200px) {
+  }
+
+  &List {
+    list-style: none;
+  }
+
+  &Item {
+    line-height: 2;
+
+    @media screen and (min-width: 1200px) {
+    }
+  }
+
+  & a,
+  &Link {
+    color: white;
+  }
+}
+

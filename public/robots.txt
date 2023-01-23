@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jenia0jenia.ru/sitemap.xml

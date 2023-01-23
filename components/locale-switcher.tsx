@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import styles from '@/styles/Local.module.scss'
+import styles from '@/styles/Home.module.scss'
 
 export default function LocaleSwitcher() {
   const router = useRouter()
@@ -35,25 +35,35 @@ export default function LocaleSwitcher() {
 }
 
 
-// const content = {
-//   "ru": {
-//     en: "англ.",
-//     fr: "фр.",
-//     ch: "кит.",
-//   },
-//   "en": {
-//     ru: "ru",
-//     fr: "fr",
-//     ch: "ch",
-//   },
-//   "fr": {
-//     ru: "russe",
-//     en: "anglais",
-//     ch: "сhinois",
-//   },
-//   "ch": {
-//     ru: "俄语",
-//     en: "英语",
-//     fr: "法语",
-//   },
-// };
+const content = {
+  "ru": {
+    ua: "укр.",
+    en: "англ.",
+    fr: "фр.",
+    ch: "кит.",
+  },
+  "ua": {
+    ru: "рус.",
+    en: "англ.",
+    fr: "фр.",
+    ch: "кит.",
+  },
+  "en": {
+    ru: "ru",
+    ua: "укр.",
+    fr: "fr",
+    ch: "ch",
+  },
+  "fr": {
+    ru: "russe",
+    ua: "укр.",
+    en: "anglais",
+    ch: "сhinois",
+  },
+  "ch": {
+    ru: "俄语",
+    ua: "乌克兰语",
+    en: "英语",
+    fr: "法语",
+  },
+};
