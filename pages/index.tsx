@@ -43,7 +43,7 @@ export default function Home() {
   useEffect(() => {
     const video = document.getElementById("video");
     if (video) {
-      video.playbackRate = 0.9;
+      // video.playbackRate = 0.9;
     }
   }, [])
 
