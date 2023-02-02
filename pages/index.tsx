@@ -1,38 +1,65 @@
 import Head from 'next/head'
-// import { Inter } from '@next/font/google'
+import Link from 'next/link'
 import styles from '@/styles/Home.module.scss'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+
 import LocaleSwitcher from '../components/locale-switcher'
 import YA from '../components/ya'
+import GA from '../components/ga'
 
 // const inter = Inter({ subsets: ['latin', 'cyrillic', ] })
 
 const content = {
   "ru": {
     title: "созидание красивых сайтов",
+    description: "веб сайты могут быть другими.",
+    slogan: "созидание красивых сайтов",
     phone: "Телефон",
     email: "Почта",
+    menu: {
+      links: "Ссылки"
+    },
   },
   "ua": {
     title: "створювати красиві сайти",
+    description: "веб-сайти можуть бути іншими.",
+    slogan: "створювати красиві сайти",
     phone: "Телефон",
     email: "Пошта",
+    menu: {
+      links: "Ссылки"
+    },    
   },
   "en": {
     title: "beautiful websites development",
+    description: "websites may be different.",
+    slogan: "beautiful websites development",
     phone: "Phone",
     email: "E-mail",
+    menu: {
+      links: "Ссылки"
+    },    
   },
   "fr": {
     title: "construire de beaux sites Web",
+    description: "les sites Web peuvent être différents.",
+    slogan: "construire de beaux sites Web",
     phone: "Téléphone",
     email: "Poster",
+    menu: {
+      links: "Ссылки"
+    },    
   },
   "ch": {
     title: "建立漂亮的网站",
+    description: "网站可能不同。",
+    slogan: "建立漂亮的网站",
     phone: "电话号码",
     email: "电子信箱",
+    menu: {
+      links: "Ссылки"
+    },    
   },
 };
 
@@ -50,32 +77,41 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>jenia0jenia.ru {content[activeLocale].title}</title>
-        <meta name="description" content="sites development" />
+        <title>{content[activeLocale].title}</title>
+        <meta name="description" content={content[activeLocale].description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="favicon.ico" />
         <YA></YA>
+        <GA></GA>
       </Head>
 
       <main className={`${activeLocale} ${styles.main}`}>
-        <LocaleSwitcher />
+        <div className={styles.screen}>
+          {/* slogan */}
+          <div className={styles.slogan}>
+            <div className={styles.sloganTitle}>{content[activeLocale].slogan}</div>
+          </div>
+
+          {/* sidebar */}
+          <div className={styles.sitebar}>
+            <LocaleSwitcher />
+
+            {/* <Link className={styles.link} href="/links">{content[activeLocale].menu.links}</Link> */}
+
+            <div className={styles.contacts}>
+              <div className={styles.contactsPhone}>{content[activeLocale].phone}: <a href="tel:+79995812843">+79995812843</a></div>
+              <div className={styles.contactsEmail}>{content[activeLocale].email}: <a href={`mailto:${activeLocale}@jenia0jenia.ru`}>{activeLocale}@jenia0jenia.ru</a></div>
+            </div>
+          </div>
+        </div>
+
+        {/* video */}
         <div className={styles.video}>
           <video loop muted autoPlay poster="images/murmuration.avif" className={styles.video} id="video">
             <source src="murmuration.mp4" type="video/mp4"></source>
           </video>
         </div>
         <div className={styles.overlay}></div>
-        <div className={styles.center}>
-          <div className={styles.businessCard}>
-            <div className={styles.businessCardTitle}>{content[activeLocale].title}</div>
-            {/* <div className={styles.businessCardPhone}>{content[activeLocale].phone}: <a href="tel:+79995812843">+79995812843</a></div> */}
-            {/* <div className={styles.businessCardEmail}>{content[activeLocale].email}: <a href={`mailto:${activeLocale}@jenia0jenia.ru`}>{activeLocale}@jenia0jenia.ru</a></div> */}
-          </div>
-        </div>
-        <div className={styles.contacts}>
-          <div className={styles.contactsPhone}>{content[activeLocale].phone}: <a href="tel:+79995812843">+79995812843</a></div>
-          <div className={styles.contactsEmail}>{content[activeLocale].email}: <a href={`mailto:${activeLocale}@jenia0jenia.ru`}>{activeLocale}@jenia0jenia.ru</a></div>
-        </div>
       </main>
     </>
   )

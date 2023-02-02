@@ -6,11 +6,31 @@
   height: 100vh;
 }
 
-.center {
+.screen {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.sitebar {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: right;
+  padding: 11px 41px 41px 11px;
+  gap: 11px;
+  
+  @media screen and (max-width: 780px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 11px 21px 21px 11px;
+  }
 }
 
 .overlay,
@@ -33,12 +53,19 @@
   z-index: -10;
 }
 
-.businessCard {
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-basis: fill;
+  
   color: white;
-  max-width: 300px;
   width: 100%;
   
   &Title {
+    margin: auto;
+    max-width: 300px;
     word-spacing: 10px;
     letter-spacing: 11px;
     line-height: 42px;
@@ -46,19 +73,18 @@
     font-weight: 100;
     margin-bottom: 24px;
   }
-  &Phone {
-    a {
-      color: white;
-    }
-  }
 }
 
 .contacts {
-  position: absolute;
   bottom: 20px;
   right: 40px;
   line-height: 2;
   color: white;
+  white-space: nowrap;
+  
+  @media screen and (max-width: 780px) {
+    white-space: normal;
+  }
 
   &Phone {
     a {
@@ -73,10 +99,6 @@
 }
 
 .local {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-
   @media screen and (min-width: 1200px) {
   }
 
@@ -97,3 +119,6 @@
   }
 }
 
+.link {
+  color: white;
+}
