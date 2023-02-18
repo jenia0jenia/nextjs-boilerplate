@@ -6,62 +6,11 @@ import { useRouter } from 'next/router'
 
 import LocaleSwitcher from '../components/locale-switcher'
 import YA from '../components/ya'
-import GA from '../components/ga'
+import CursorLines from '../components/cursor-lines'
+
+import content from '../language/lang-select.json'
 
 // const inter = Inter({ subsets: ['latin', 'cyrillic', ] })
-
-const content = {
-  "ru": {
-    title: "созидание красивых сайтов",
-    description: "веб сайты могут быть другими.",
-    slogan: "созидание красивых сайтов",
-    phone: "Телефон",
-    email: "Почта",
-    menu: {
-      links: "Ссылки"
-    },
-  },
-  "ua": {
-    title: "створювати красиві сайти",
-    description: "веб-сайти можуть бути іншими.",
-    slogan: "створювати красиві сайти",
-    phone: "Телефон",
-    email: "Пошта",
-    menu: {
-      links: "Ссылки"
-    },    
-  },
-  "en": {
-    title: "beautiful websites development",
-    description: "websites may be different.",
-    slogan: "beautiful websites development",
-    phone: "Phone",
-    email: "E-mail",
-    menu: {
-      links: "Ссылки"
-    },    
-  },
-  "fr": {
-    title: "construire de beaux sites Web",
-    description: "les sites Web peuvent être différents.",
-    slogan: "construire de beaux sites Web",
-    phone: "Téléphone",
-    email: "Poster",
-    menu: {
-      links: "Ссылки"
-    },    
-  },
-  "ch": {
-    title: "建立漂亮的网站",
-    description: "网站可能不同。",
-    slogan: "建立漂亮的网站",
-    phone: "电话号码",
-    email: "电子信箱",
-    menu: {
-      links: "Ссылки"
-    },    
-  },
-};
 
 export default function Home() {
   const router = useRouter()
@@ -88,7 +37,6 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         <YA></YA>
-        <GA></GA>
       </Head>
 
       <main className={`${activeLocale} ${styles.main}`}>
@@ -119,6 +67,9 @@ export default function Home() {
         </div>
         <div className={styles.overlay}></div>
       </main>
+
+      <CursorLines></CursorLines>
+
     </>
   )
 }

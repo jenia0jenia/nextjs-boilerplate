@@ -122,3 +122,24 @@
 .link {
   color: white;
 }
+
+.CursorLines {
+  &H,
+  &V {
+    position: fixed;
+    top: -1px;
+    left: -1px;
+    background-color: rebeccapurple;
+    user-select: none;
+  }
+
+  &V {
+    width: 1px;
+    height: 9999px;
+  }
+
+  &H {
+    width: 99999px;
+    height: 1px;
+  }
+}
