@@ -8,7 +8,6 @@ export default function CursorLines(props) {
 
         if (lineH && lineV) {
             document.addEventListener("mousemove", (e: MouseEvent) => {
-                console.log(e.clientY);
                 lineH.style.top = e.clientY + 2 + "px";
                 lineV.style.left = e.clientX + 2 + "px";
             })
