@@ -24,7 +24,7 @@
   text-align: right;
   padding: 11px 41px 41px 11px;
   gap: 11px;
-  
+
   @media screen and (max-width: 780px) {
     position: absolute;
     top: 0;
@@ -59,10 +59,10 @@
   align-items: center;
   position: relative;
   flex-basis: fill;
-  
+
   color: white;
   width: 100%;
-  
+
   &Title {
     margin: auto;
     max-width: 300px;
@@ -81,7 +81,7 @@
   line-height: 2;
   color: white;
   white-space: nowrap;
-  
+
   @media screen and (max-width: 780px) {
     white-space: normal;
   }
@@ -91,7 +91,14 @@
       color: white;
     }
   }
+
   &Email {
+    a {
+      color: white;
+    }
+  }
+
+  &Link {
     a {
       color: white;
     }
@@ -99,8 +106,7 @@
 }
 
 .local {
-  @media screen and (min-width: 1200px) {
-  }
+  @media screen and (min-width: 1200px) {}
 
   &List {
     list-style: none;
@@ -109,8 +115,7 @@
   &Item {
     line-height: 2;
 
-    @media screen and (min-width: 1200px) {
-    }
+    @media screen and (min-width: 1200px) {}
   }
 
   & a,
@@ -124,6 +129,7 @@
 }
 
 .CursorLines {
+
   &H,
   &V {
     position: fixed;

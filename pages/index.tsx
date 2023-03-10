@@ -38,19 +38,20 @@ export default function Home() {
       <main className={`${activeLocale} ${styles.main}`}>
         <div className={styles.screen}>
           {/* slogan */}
-          <div className={styles.slogan}>
+          {/* <div className={styles.slogan}>
             <div className={styles.sloganTitle}>{content[activeLocale].slogan}</div>
-          </div>
+          </div> */}
 
           {/* sidebar */}
           <div className={styles.sitebar}>
-            <LocaleSwitcher />
+            {/* <LocaleSwitcher /> */}
 
             {/* <Link className={styles.link} href="/links">{content[activeLocale].menu.links}</Link> */}
 
             <div className={styles.contacts}>
               <div className={styles.contactsPhone}>{content[activeLocale].phone}: <a href="tel:+79995812843">+79995812843</a></div>
-              <div className={styles.contactsEmail}>{content[activeLocale].email}: <a href={`mailto:${activeLocale}@jenia0jenia.ru`}>{activeLocale}@jenia0jenia.ru</a></div>
+              <div className={styles.contactsEmail}>{content[activeLocale].email}: <a href={`mailto:jenia0jenia@mail.ru`}>jenia0jenia@mail.ru</a></div>
+              <div className={styles.contactsLink}>{content[activeLocale].telegram}: <a href={`https://t.me/jenia0jenia`}>https://t.me/jenia0jenia</a></div>
             </div>
           </div>
         </div>
@@ -64,7 +65,7 @@ export default function Home() {
         <div className={styles.overlay}></div>
       </main>
 
-      <CursorLines></CursorLines>
+      {/* <CursorLines></CursorLines> */}
 
     </>
   )
